@@ -1,4 +1,4 @@
-package bootcamp2306_av.models;
+package bootcamp2306_av.models.entities;
 
 import jakarta.persistence.*;
 
@@ -9,18 +9,30 @@ public class User {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
-    @Basic
+
     @Column(name = "name", nullable = false, length = 255)
     private String name;
-    @Basic
+
     @Column(name = "age", nullable = true)
     private Integer age;
-    @Basic
+
     @Column(name = "email", nullable = false, length = 255)
     private String email;
-    @Basic
+
     @Column(name = "password", nullable = false, length = 255)
     private String password;
+
+    public User() {
+    }
+
+
+    public User(Long id, String name, Integer age, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.password = password;
+    }
 
     public Long getId() {
         return id;

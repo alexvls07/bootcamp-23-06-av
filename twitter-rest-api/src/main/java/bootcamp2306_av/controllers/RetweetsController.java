@@ -1,6 +1,6 @@
 package bootcamp2306_av.controllers;
 
-import bootcamp2306_av.models.Retweet;
+import bootcamp2306_av.models.entities.Retweet;
 import bootcamp2306_av.services.RetweetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

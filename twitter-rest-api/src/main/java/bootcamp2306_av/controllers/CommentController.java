@@ -1,6 +1,6 @@
 package bootcamp2306_av.controllers;
 
-import bootcamp2306_av.models.Comment;
+import bootcamp2306_av.models.entities.Comment;
 import bootcamp2306_av.services.CommentsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,9 +18,10 @@ public class CommentController {
 
     public List<Comment> getAll() {
 
+
         // run code to get the user from the database
-        return null;
-//        return CommentsService.getAllComments();
+//        return null;
+        return commentsService.getAllComments();
     }
 
     @GetMapping("/comments/{comment_id}")

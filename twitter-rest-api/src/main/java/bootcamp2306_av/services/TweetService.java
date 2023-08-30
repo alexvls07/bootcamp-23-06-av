@@ -1,7 +1,6 @@
 package bootcamp2306_av.services;
 
-import bootcamp2306_av.models.Retweet;
-import bootcamp2306_av.models.Tweet;
+import bootcamp2306_av.models.entities.Tweet;
 import bootcamp2306_av.repositories.TweetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,9 +24,14 @@ public class TweetService {
                 .orElseThrow(() -> new Exception("Tweet not exists with id" + tweet_id));
     }
 
+    public List<Tweet> getTweetsByUserId(Long userId) throws Exception {
+
+        return tweetRepository.findByUserId(userId);
+    }
+
     public Tweet createTweet(Tweet tweet) throws Exception {
 
-        Tweet tweetInDB = tweetRepository.findBytweet_id(tweet.getTweetId());
+        Tweet tweetInDB = tweetRepository.findByTweetId(tweet.getTweetId());
 
         if (tweetInDB != null) {
             throw new Exception("Tweet with id " + tweet.getTweetId() + " already exists");

@@ -1,6 +1,6 @@
 package bootcamp2306_av.services;
 
-import bootcamp2306_av.models.Comment;
+import bootcamp2306_av.models.entities.Comment;
 import bootcamp2306_av.repositories.CommentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +23,12 @@ public class CommentsService {
 
         return commentsRepository.findById(comment_id)
                 .orElseThrow(() -> new Exception("Comment does not exists with id" + comment_id));
+    }
+
+    public List<Comment> getCommentByTweetId(Long tweet_id) throws Exception {
+
+        return commentsRepository.findByTweetId(tweet_id);
+                //.orElseThrow(() -> new Exception("Comment does not exists in tweet with id" + tweet_id));
     }
 
     public Comment createComment(Comment comment) throws Exception {

@@ -1,6 +1,6 @@
 package bootcamp2306_av.controllers;
 
-import bootcamp2306_av.models.Likes;
+import bootcamp2306_av.models.entities.Likes;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

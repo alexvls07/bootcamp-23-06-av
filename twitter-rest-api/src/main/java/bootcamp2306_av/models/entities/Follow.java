@@ -1,4 +1,4 @@
-package bootcamp2306_av.models;
+package bootcamp2306_av.models.entities;
 
 import jakarta.persistence.*;
 

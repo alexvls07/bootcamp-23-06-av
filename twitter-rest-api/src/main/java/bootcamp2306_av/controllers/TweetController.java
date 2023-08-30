@@ -1,6 +1,8 @@
 package bootcamp2306_av.controllers;
 
-import bootcamp2306_av.models.Tweet;
+import bootcamp2306_av.models.entities.Comment;
+import bootcamp2306_av.models.entities.Tweet;
+import bootcamp2306_av.services.CommentsService;
 import bootcamp2306_av.services.TweetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,10 @@ import java.util.List;
 public class TweetController {
     @Autowired
     private TweetService tweetService;
+
+
+    @Autowired
+    private CommentsService commentsService;
 
     @GetMapping("/tweet")
     public List<Tweet> getAll() {
@@ -25,6 +31,13 @@ public class TweetController {
     public Tweet getById(@PathVariable("tweet_id") Long id) throws Exception {
         return tweetService.getTweetById(id);
     }
+
+    @GetMapping("/tweet/{tweet_id}/comments")
+    public List<Comment> getByTweetId(@PathVariable("tweet_id") Long tweet_id) throws Exception {
+        return commentsService.getCommentByTweetId(tweet_id);
+    }
+
+
 
     @PostMapping("/tweet")
     public Tweet createTweet(@RequestBody Tweet tweet) throws Exception {

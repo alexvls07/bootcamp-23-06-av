@@ -1,6 +1,6 @@
 package bootcamp2306_av.services;
 
-import bootcamp2306_av.models.Follow;
+import bootcamp2306_av.models.entities.Follow;
 import bootcamp2306_av.repositories.FollowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

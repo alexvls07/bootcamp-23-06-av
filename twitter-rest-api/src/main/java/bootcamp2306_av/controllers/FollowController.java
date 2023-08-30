@@ -1,6 +1,6 @@
 package bootcamp2306_av.controllers;
 
-import bootcamp2306_av.models.Follow;
+import bootcamp2306_av.models.entities.Follow;
 import bootcamp2306_av.services.FollowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package bootcamp2306_av.services;
 
-import bootcamp2306_av.models.Retweet;
+import bootcamp2306_av.models.entities.Retweet;
 import bootcamp2306_av.repositories.RetweetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
