@@ -81,13 +81,17 @@ whatsoever but it will still have base interface intact.
 
 ## Screenshots
 Running at first
+![Screenshot_1](https://github.com/alexvls07/bootcamp-23-06-av/assets/138501703/3c799c25-9852-407f-a9ea-88d94b8490fc)
 
 login-page
+![Screenshot_2](https://github.com/alexvls07/bootcamp-23-06-av/assets/138501703/f5209563-3cc0-4232-ba9a-4e8977616147)
 
 
 
 
 posting a tweet
+![Screenshot_3](https://github.com/alexvls07/bootcamp-23-06-av/assets/138501703/1667515e-ed86-433c-b361-38eb58891f89)
+![Screenshot_4](https://github.com/alexvls07/bootcamp-23-06-av/assets/138501703/2a95d908-68c7-450e-86db-f54946cc0d53)
 
 
 
